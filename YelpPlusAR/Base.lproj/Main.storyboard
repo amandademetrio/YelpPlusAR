@@ -20,10 +20,18 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Day-kc-xjK">
                                 <rect key="frame" x="8" y="28" width="359" height="631"/>
                             </mapView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bvY-8d-mSm">
+                                <rect key="frame" x="306" y="40" width="51" height="31"/>
+                                <connections>
+                                    <action selector="arSwitchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="OhJ-d8-oYJ"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Day-kc-xjK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="AJs-QY-4Ep"/>
+                            <constraint firstItem="bvY-8d-mSm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Cek-1M-7gh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bvY-8d-mSm" secondAttribute="trailing" constant="20" id="D3r-Eh-OlO"/>
                             <constraint firstItem="Day-kc-xjK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="tcp-EZ-neT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Day-kc-xjK" secondAttribute="trailing" constant="8" id="te7-Vl-8hH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Day-kc-xjK" secondAttribute="bottom" constant="8" id="u9p-ag-t7X"/>
@@ -31,11 +39,52 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="arSwitch" destination="bvY-8d-mSm" id="eui-2S-U3q"/>
                         <outlet property="mainMap" destination="Day-kc-xjK" id="gWm-Ho-ZYP"/>
+                        <segue destination="ItY-8V-vSW" kind="show" identifier="switchToAR" id="URs-UY-HVk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="534" y="280"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="j7e-sq-AJ7">
+            <objects>
+                <viewController id="ItY-8V-vSW" customClass="ARViewController" customModule="YelpPlusAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kqt-My-BKf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E7a-eE-1ca">
+                                <rect key="frame" x="8" y="28" width="359" height="631"/>
+                            </arscnView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u3e-g9-RLX">
+                                <rect key="frame" x="306" y="40" width="51" height="31"/>
+                                <connections>
+                                    <action selector="mapSwitchPressed:" destination="ItY-8V-vSW" eventType="valueChanged" id="mfT-AT-2vL"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="E7a-eE-1ca" firstAttribute="leading" secondItem="8N3-yF-Ad2" secondAttribute="leading" constant="8" id="8JQ-BE-KIE"/>
+                            <constraint firstItem="u3e-g9-RLX" firstAttribute="top" secondItem="8N3-yF-Ad2" secondAttribute="top" constant="20" id="D5g-SO-qzP"/>
+                            <constraint firstItem="8N3-yF-Ad2" firstAttribute="trailing" secondItem="E7a-eE-1ca" secondAttribute="trailing" constant="8" id="HSn-9E-Rxy"/>
+                            <constraint firstItem="8N3-yF-Ad2" firstAttribute="bottom" secondItem="E7a-eE-1ca" secondAttribute="bottom" constant="8" id="U3Z-jj-aYE"/>
+                            <constraint firstItem="8N3-yF-Ad2" firstAttribute="trailing" secondItem="u3e-g9-RLX" secondAttribute="trailing" constant="20" id="kau-K9-OWy"/>
+                            <constraint firstItem="E7a-eE-1ca" firstAttribute="top" secondItem="8N3-yF-Ad2" secondAttribute="top" constant="8" id="uup-eL-WHF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8N3-yF-Ad2"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapSwitch" destination="u3e-g9-RLX" id="cPU-5U-cRS"/>
+                        <outlet property="sceneView" destination="E7a-eE-1ca" id="v9r-nj-bQb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xG8-1c-bEi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1334" y="277"/>
         </scene>
     </scenes>
 </document>

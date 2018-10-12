@@ -14,6 +14,7 @@
 		D0272CC6216EE1540047FFE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0272CC5216EE1540047FFE8 /* Assets.xcassets */; };
 		D0272CC9216EE1540047FFE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0272CC7216EE1540047FFE8 /* LaunchScreen.storyboard */; };
 		D0272CD1216FF8860047FFE8 /* YelpPlusARModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0272CD0216FF8860047FFE8 /* YelpPlusARModel.swift */; };
+		D066836021715BCE003A0FD6 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D066835F21715BCE003A0FD6 /* ARViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D0272CC8216EE1540047FFE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0272CCA216EE1540047FFE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0272CD0216FF8860047FFE8 /* YelpPlusARModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpPlusARModel.swift; sourceTree = "<group>"; };
+		D066835F21715BCE003A0FD6 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				D0272CBB216EE1530047FFE8 /* AppDelegate.swift */,
 				D0272CBD216EE1530047FFE8 /* ViewController.swift */,
+				D066835F21715BCE003A0FD6 /* ARViewController.swift */,
 				D0272CD0216FF8860047FFE8 /* YelpPlusARModel.swift */,
 				D0272CBF216EE1530047FFE8 /* Main.storyboard */,
 				D0272CC5216EE1540047FFE8 /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 				D0272CBC216EE1530047FFE8 /* AppDelegate.swift in Sources */,
 				D0272CD1216FF8860047FFE8 /* YelpPlusARModel.swift in Sources */,
 				D0272CC4216EE1530047FFE8 /* YelpPlusAR.xcdatamodeld in Sources */,
+				D066836021715BCE003A0FD6 /* ARViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
