@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D001520F2171866F0054963D /* ARAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00151FF2171866F0054963D /* ARAnnotation.swift */; };
+		D00152102171866F0054963D /* ARTrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00152002171866F0054963D /* ARTrackingManager.swift */; };
+		D00152112171866F0054963D /* ARPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00152012171866F0054963D /* ARPresenter.swift */; };
+		D00152122171866F0054963D /* ARAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00152022171866F0054963D /* ARAnnotationView.swift */; };
+		D00152132171866F0054963D /* ARPresenterTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00152032171866F0054963D /* ARPresenterTransform.swift */; };
+		D00152142171866F0054963D /* ARConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00152042171866F0054963D /* ARConfiguration.swift */; };
+		D00152152171866F0054963D /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00152062171866F0054963D /* CameraView.swift */; };
+		D00152162171866F0054963D /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00152072171866F0054963D /* ARViewController.swift */; };
+		D00152172171866F0054963D /* DebugMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00152092171866F0054963D /* DebugMapViewController.swift */; };
+		D00152182171866F0054963D /* hdar_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D001520B2171866F0054963D /* hdar_close@3x.png */; };
+		D00152192171866F0054963D /* hdar_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D001520C2171866F0054963D /* hdar_close@2x.png */; };
+		D001521A2171866F0054963D /* DebugMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D001520D2171866F0054963D /* DebugMapViewController.xib */; };
+		D001521B2171866F0054963D /* hdar_close.png in Resources */ = {isa = PBXBuildFile; fileRef = D001520E2171866F0054963D /* hdar_close.png */; };
 		D0272CBC216EE1530047FFE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0272CBB216EE1530047FFE8 /* AppDelegate.swift */; };
 		D0272CBE216EE1530047FFE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0272CBD216EE1530047FFE8 /* ViewController.swift */; };
 		D0272CC1216EE1530047FFE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0272CBF216EE1530047FFE8 /* Main.storyboard */; };
@@ -14,10 +27,23 @@
 		D0272CC6216EE1540047FFE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0272CC5216EE1540047FFE8 /* Assets.xcassets */; };
 		D0272CC9216EE1540047FFE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0272CC7216EE1540047FFE8 /* LaunchScreen.storyboard */; };
 		D0272CD1216FF8860047FFE8 /* YelpPlusARModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0272CD0216FF8860047FFE8 /* YelpPlusARModel.swift */; };
-		D066836021715BCE003A0FD6 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D066835F21715BCE003A0FD6 /* ARViewController.swift */; };
+		D066836021715BCE003A0FD6 /* MainARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D066835F21715BCE003A0FD6 /* MainARViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D00151FF2171866F0054963D /* ARAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotation.swift; sourceTree = "<group>"; };
+		D00152002171866F0054963D /* ARTrackingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARTrackingManager.swift; sourceTree = "<group>"; };
+		D00152012171866F0054963D /* ARPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARPresenter.swift; sourceTree = "<group>"; };
+		D00152022171866F0054963D /* ARAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotationView.swift; sourceTree = "<group>"; };
+		D00152032171866F0054963D /* ARPresenterTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARPresenterTransform.swift; sourceTree = "<group>"; };
+		D00152042171866F0054963D /* ARConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARConfiguration.swift; sourceTree = "<group>"; };
+		D00152062171866F0054963D /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		D00152072171866F0054963D /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		D00152092171866F0054963D /* DebugMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugMapViewController.swift; sourceTree = "<group>"; };
+		D001520B2171866F0054963D /* hdar_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@3x.png"; sourceTree = "<group>"; };
+		D001520C2171866F0054963D /* hdar_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@2x.png"; sourceTree = "<group>"; };
+		D001520D2171866F0054963D /* DebugMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DebugMapViewController.xib; sourceTree = "<group>"; };
+		D001520E2171866F0054963D /* hdar_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hdar_close.png; sourceTree = "<group>"; };
 		D0272CB8216EE1530047FFE8 /* YelpPlusAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YelpPlusAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0272CBB216EE1530047FFE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0272CBD216EE1530047FFE8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,7 +53,7 @@
 		D0272CC8216EE1540047FFE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0272CCA216EE1540047FFE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0272CD0216FF8860047FFE8 /* YelpPlusARModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpPlusARModel.swift; sourceTree = "<group>"; };
-		D066835F21715BCE003A0FD6 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		D066835F21715BCE003A0FD6 /* MainARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainARViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +67,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D00151FD2171866F0054963D /* HDAugmentedReality */ = {
+			isa = PBXGroup;
+			children = (
+				D00151FE2171866F0054963D /* Classes */,
+				D001520A2171866F0054963D /* Resources */,
+			);
+			path = HDAugmentedReality;
+			sourceTree = "<group>";
+		};
+		D00151FE2171866F0054963D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D00151FF2171866F0054963D /* ARAnnotation.swift */,
+				D00152002171866F0054963D /* ARTrackingManager.swift */,
+				D00152012171866F0054963D /* ARPresenter.swift */,
+				D00152022171866F0054963D /* ARAnnotationView.swift */,
+				D00152032171866F0054963D /* ARPresenterTransform.swift */,
+				D00152042171866F0054963D /* ARConfiguration.swift */,
+				D00152052171866F0054963D /* External */,
+				D00152072171866F0054963D /* ARViewController.swift */,
+				D00152082171866F0054963D /* Debug */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		D00152052171866F0054963D /* External */ = {
+			isa = PBXGroup;
+			children = (
+				D00152062171866F0054963D /* CameraView.swift */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		D00152082171866F0054963D /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				D00152092171866F0054963D /* DebugMapViewController.swift */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
+		D001520A2171866F0054963D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D001520B2171866F0054963D /* hdar_close@3x.png */,
+				D001520C2171866F0054963D /* hdar_close@2x.png */,
+				D001520D2171866F0054963D /* DebugMapViewController.xib */,
+				D001520E2171866F0054963D /* hdar_close.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		D0272CAF216EE1520047FFE8 = {
 			isa = PBXGroup;
 			children = (
@@ -60,9 +138,10 @@
 		D0272CBA216EE1530047FFE8 /* YelpPlusAR */ = {
 			isa = PBXGroup;
 			children = (
+				D00151FD2171866F0054963D /* HDAugmentedReality */,
 				D0272CBB216EE1530047FFE8 /* AppDelegate.swift */,
 				D0272CBD216EE1530047FFE8 /* ViewController.swift */,
-				D066835F21715BCE003A0FD6 /* ARViewController.swift */,
+				D066835F21715BCE003A0FD6 /* MainARViewController.swift */,
 				D0272CD0216FF8860047FFE8 /* YelpPlusARModel.swift */,
 				D0272CBF216EE1530047FFE8 /* Main.storyboard */,
 				D0272CC5216EE1540047FFE8 /* Assets.xcassets */,
@@ -134,6 +213,10 @@
 				D0272CC9216EE1540047FFE8 /* LaunchScreen.storyboard in Resources */,
 				D0272CC6216EE1540047FFE8 /* Assets.xcassets in Resources */,
 				D0272CC1216EE1530047FFE8 /* Main.storyboard in Resources */,
+				D00152182171866F0054963D /* hdar_close@3x.png in Resources */,
+				D00152192171866F0054963D /* hdar_close@2x.png in Resources */,
+				D001521B2171866F0054963D /* hdar_close.png in Resources */,
+				D001521A2171866F0054963D /* DebugMapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,10 +228,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0272CBE216EE1530047FFE8 /* ViewController.swift in Sources */,
+				D00152172171866F0054963D /* DebugMapViewController.swift in Sources */,
+				D00152122171866F0054963D /* ARAnnotationView.swift in Sources */,
+				D001520F2171866F0054963D /* ARAnnotation.swift in Sources */,
+				D00152152171866F0054963D /* CameraView.swift in Sources */,
 				D0272CBC216EE1530047FFE8 /* AppDelegate.swift in Sources */,
 				D0272CD1216FF8860047FFE8 /* YelpPlusARModel.swift in Sources */,
+				D00152102171866F0054963D /* ARTrackingManager.swift in Sources */,
+				D00152132171866F0054963D /* ARPresenterTransform.swift in Sources */,
+				D00152142171866F0054963D /* ARConfiguration.swift in Sources */,
+				D00152162171866F0054963D /* ARViewController.swift in Sources */,
 				D0272CC4216EE1530047FFE8 /* YelpPlusAR.xcdatamodeld in Sources */,
-				D066836021715BCE003A0FD6 /* ARViewController.swift in Sources */,
+				D066836021715BCE003A0FD6 /* MainARViewController.swift in Sources */,
+				D00152112171866F0054963D /* ARPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

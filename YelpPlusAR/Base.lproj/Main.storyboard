@@ -48,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="534" y="280"/>
         </scene>
-        <!--View Controller-->
+        <!--MainAR View Controller-->
         <scene sceneID="j7e-sq-AJ7">
             <objects>
-                <viewController id="ItY-8V-vSW" customClass="ARViewController" customModule="YelpPlusAR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ItY-8V-vSW" customClass="MainARViewController" customModule="YelpPlusAR" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kqt-My-BKf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

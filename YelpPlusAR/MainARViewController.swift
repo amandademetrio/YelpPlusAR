@@ -9,11 +9,15 @@
 import UIKit
 import ARKit
 import SceneKit
+import CoreLocation
+import MapKit
 
-class ARViewController: UIViewController {
+class MainARViewController: UIViewController {
     
     //this will be loaded with the current restaurant list
     var listOfRestaurants: NSArray = []
+    var ARlocationManager: CLLocationManager = CLLocationManager()
+    var restNodes: [MKMapPoint] = []
     
     @IBOutlet weak var sceneView: ARSCNView!
     
@@ -25,6 +29,7 @@ class ARViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ARlocationManager.delegate = self
         mapSwitch.isOn = true
         
         //setting up sceneView
@@ -39,10 +44,8 @@ class ARViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        //setting up ar session
         let config = ARWorldTrackingConfiguration()
-        //may need to change this config part
-        config.worldAlignment = .gravity
+        config.worldAlignment = .gravityAndHeading
         sceneView.session.run(config)
     }
     
@@ -56,18 +59,12 @@ class ARViewController: UIViewController {
         let sphereNode = SCNNode(geometry: geometry)
         return sphereNode
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }
 
-extension ARViewController: ARSCNViewDelegate {
+extension MainARViewController: ARSCNViewDelegate {
+    
+}
+
+extension MainARViewController: CLLocationManagerDelegate {
     
 }

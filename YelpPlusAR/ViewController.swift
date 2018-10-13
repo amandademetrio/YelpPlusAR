@@ -57,7 +57,7 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as! ARViewController
+        let destination = segue.destination as! MainARViewController
         destination.listOfRestaurants = self.listOfRestaurants
     }
     
