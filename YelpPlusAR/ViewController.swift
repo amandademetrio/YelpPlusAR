@@ -14,15 +14,14 @@ import ARKit
 class ViewController: UIViewController {
     
     var locationManager: CLLocationManager = CLLocationManager()
-    var listOfRestaurants: NSArray = [];
+    var listOfPlaces: NSArray = [];
     
     @IBOutlet weak var mainMap: MKMapView!
-    
     @IBOutlet weak var arSwitch: UISwitch!
     
     @IBAction func arSwitchChanged(_ sender: UISwitch) {
-        performSegue(withIdentifier: "switchToAR", sender: nil)
         self.arSwitch.isOn = false
+        performSegue(withIdentifier: "SwitchToARSegue", sender: nil)
     }
     
     override func viewDidLoad() {
@@ -30,15 +29,21 @@ class ViewController: UIViewController {
         //Setting Map
         mainMap.userTrackingMode = .follow
         //Setting up location manager
-        self.locationManager.requestAlwaysAuthorization()
+        
+        //First check if there already location is authorized
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.requestWhenInUseAuthorization()
+            locationManager.startUpdatingLocation()
+        }
+
         let userLatitute = self.locationManager.location?.coordinate.latitude
         let userLongiture = self.locationManager.location?.coordinate.longitude
 
         YelpPlusARModel.getAllFood(completionHandler: { (data, response, error) in
             do {
                 if let jsonResult = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as? NSDictionary {
-                    self.listOfRestaurants = jsonResult["businesses"] as! NSArray
-                    for restaurant in self.listOfRestaurants {
+                    self.listOfPlaces = jsonResult["businesses"] as! NSArray
+                    for restaurant in self.listOfPlaces {
                         let restDict = restaurant as! NSDictionary
                         //getting coordinates for pins
                         let restCoord = restDict["coordinates"]! as! NSDictionary
@@ -56,13 +61,13 @@ class ViewController: UIViewController {
         }, userLatitute!, userLongiture!)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as! MainARViewController
-        destination.listOfRestaurants = self.listOfRestaurants
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         self.arSwitch.isOn = false
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! MainARViewController
+        destination.listOfPlaces = self.listOfPlaces
     }
     
     func createMapMark(_ latitude: Double, _ longitude: Double, _ restaurantName: String) {
@@ -72,6 +77,5 @@ class ViewController: UIViewController {
         mapPoint.title = restaurantName
         self.mainMap.addAnnotation(mapPoint)
     }
-    
 }
 

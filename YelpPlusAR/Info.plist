@@ -44,5 +44,9 @@
 	<string></string>
 	<key>NSCameraUsageDescription</key>
 	<string>This app needs to use your camera for Augmented Reality</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Optional Message</string>
+	<key>NSLocationUsageDescription</key>
+	<string></string>
 </dict>
 </plist>

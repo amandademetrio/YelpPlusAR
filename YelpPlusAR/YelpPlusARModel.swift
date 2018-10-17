@@ -13,7 +13,7 @@ class YelpPlusARModel {
     static func getAllFood(completionHandler:@escaping (_ data: Data?, _ response: URLResponse?, _ error: Error?) -> Void, _ userLat: Double, _ userLong: Double) {
         let token = "OVZY9-01RSLTvs5AFJsT2qkjlzU4fpAluVPlMeXu5rjSjgOz24ZDGbiW9vRMCN_Cffw2ZIQQ8G97OaJtQL4YHieVumR_rSJk3gg0eQcbrocj05Ye3Yq9IsL5g4mhW3Yx"
 
-        let url = URL(string: "https://api.yelp.com/v3/businesses/search?term=restaurants&latitude=\(userLat)&longitude=\(userLong)")
+        let url = URL(string: "https://api.yelp.com/v3/businesses/search?term=bars&latitude=\(userLat)&longitude=\(userLong)&limit=5")
 
         let session = URLSession.shared
         

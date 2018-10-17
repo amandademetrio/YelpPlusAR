@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Day-kc-xjK">
-                                <rect key="frame" x="8" y="28" width="359" height="631"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                             </mapView>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bvY-8d-mSm">
                                 <rect key="frame" x="306" y="40" width="51" height="31"/>
@@ -29,19 +29,19 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Day-kc-xjK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="AJs-QY-4Ep"/>
                             <constraint firstItem="bvY-8d-mSm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Cek-1M-7gh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bvY-8d-mSm" secondAttribute="trailing" constant="20" id="D3r-Eh-OlO"/>
-                            <constraint firstItem="Day-kc-xjK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="tcp-EZ-neT"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Day-kc-xjK" secondAttribute="trailing" constant="8" id="te7-Vl-8hH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Day-kc-xjK" secondAttribute="bottom" constant="8" id="u9p-ag-t7X"/>
+                            <constraint firstItem="Day-kc-xjK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UXG-TQ-KaK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Day-kc-xjK" secondAttribute="bottom" id="Uss-Wo-pQr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Day-kc-xjK" secondAttribute="trailing" id="lrD-bZ-Vbh"/>
+                            <constraint firstItem="Day-kc-xjK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zbA-J7-z0l"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="arSwitch" destination="bvY-8d-mSm" id="eui-2S-U3q"/>
                         <outlet property="mainMap" destination="Day-kc-xjK" id="gWm-Ho-ZYP"/>
-                        <segue destination="ItY-8V-vSW" kind="show" identifier="switchToAR" id="URs-UY-HVk"/>
+                        <segue destination="OOP-pp-8N2" kind="show" identifier="SwitchToARSegue" id="dji-Gf-nRD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -49,42 +49,34 @@
             <point key="canvasLocation" x="534" y="280"/>
         </scene>
         <!--MainAR View Controller-->
-        <scene sceneID="j7e-sq-AJ7">
+        <scene sceneID="SBB-Ii-MKy">
             <objects>
-                <viewController id="ItY-8V-vSW" customClass="MainARViewController" customModule="YelpPlusAR" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kqt-My-BKf">
+                <viewController id="OOP-pp-8N2" customClass="MainARViewController" customModule="YelpPlusAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gdn-UK-ZTO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E7a-eE-1ca">
-                                <rect key="frame" x="8" y="28" width="359" height="631"/>
-                            </arscnView>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u3e-g9-RLX">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qhQ-SN-UOm">
                                 <rect key="frame" x="306" y="40" width="51" height="31"/>
                                 <connections>
-                                    <action selector="mapSwitchPressed:" destination="ItY-8V-vSW" eventType="valueChanged" id="mfT-AT-2vL"/>
+                                    <action selector="mapSwitchPressed:" destination="OOP-pp-8N2" eventType="valueChanged" id="HpY-xw-tsZ"/>
                                 </connections>
                             </switch>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="E7a-eE-1ca" firstAttribute="leading" secondItem="8N3-yF-Ad2" secondAttribute="leading" constant="8" id="8JQ-BE-KIE"/>
-                            <constraint firstItem="u3e-g9-RLX" firstAttribute="top" secondItem="8N3-yF-Ad2" secondAttribute="top" constant="20" id="D5g-SO-qzP"/>
-                            <constraint firstItem="8N3-yF-Ad2" firstAttribute="trailing" secondItem="E7a-eE-1ca" secondAttribute="trailing" constant="8" id="HSn-9E-Rxy"/>
-                            <constraint firstItem="8N3-yF-Ad2" firstAttribute="bottom" secondItem="E7a-eE-1ca" secondAttribute="bottom" constant="8" id="U3Z-jj-aYE"/>
-                            <constraint firstItem="8N3-yF-Ad2" firstAttribute="trailing" secondItem="u3e-g9-RLX" secondAttribute="trailing" constant="20" id="kau-K9-OWy"/>
-                            <constraint firstItem="E7a-eE-1ca" firstAttribute="top" secondItem="8N3-yF-Ad2" secondAttribute="top" constant="8" id="uup-eL-WHF"/>
+                            <constraint firstItem="Kv8-aZ-JxF" firstAttribute="trailing" secondItem="qhQ-SN-UOm" secondAttribute="trailing" constant="20" id="FWC-5A-ZO7"/>
+                            <constraint firstItem="qhQ-SN-UOm" firstAttribute="top" secondItem="Kv8-aZ-JxF" secondAttribute="top" constant="20" id="fFi-vw-XWc"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="8N3-yF-Ad2"/>
+                        <viewLayoutGuide key="safeArea" id="Kv8-aZ-JxF"/>
                     </view>
                     <connections>
-                        <outlet property="mapSwitch" destination="u3e-g9-RLX" id="cPU-5U-cRS"/>
-                        <outlet property="sceneView" destination="E7a-eE-1ca" id="v9r-nj-bQb"/>
+                        <outlet property="mapSwitch" destination="qhQ-SN-UOm" id="XAn-vt-zN9"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xG8-1c-bEi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="adn-fS-Tu3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1334" y="277"/>
+            <point key="canvasLocation" x="1372" y="277"/>
         </scene>
     </scenes>
 </document>

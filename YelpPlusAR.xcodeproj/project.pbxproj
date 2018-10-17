@@ -7,19 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D001520F2171866F0054963D /* ARAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00151FF2171866F0054963D /* ARAnnotation.swift */; };
-		D00152102171866F0054963D /* ARTrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00152002171866F0054963D /* ARTrackingManager.swift */; };
-		D00152112171866F0054963D /* ARPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00152012171866F0054963D /* ARPresenter.swift */; };
-		D00152122171866F0054963D /* ARAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00152022171866F0054963D /* ARAnnotationView.swift */; };
-		D00152132171866F0054963D /* ARPresenterTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00152032171866F0054963D /* ARPresenterTransform.swift */; };
-		D00152142171866F0054963D /* ARConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00152042171866F0054963D /* ARConfiguration.swift */; };
-		D00152152171866F0054963D /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00152062171866F0054963D /* CameraView.swift */; };
-		D00152162171866F0054963D /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00152072171866F0054963D /* ARViewController.swift */; };
-		D00152172171866F0054963D /* DebugMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D00152092171866F0054963D /* DebugMapViewController.swift */; };
-		D00152182171866F0054963D /* hdar_close@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = D001520B2171866F0054963D /* hdar_close@3x.png */; };
-		D00152192171866F0054963D /* hdar_close@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D001520C2171866F0054963D /* hdar_close@2x.png */; };
-		D001521A2171866F0054963D /* DebugMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D001520D2171866F0054963D /* DebugMapViewController.xib */; };
-		D001521B2171866F0054963D /* hdar_close.png in Resources */ = {isa = PBXBuildFile; fileRef = D001520E2171866F0054963D /* hdar_close.png */; };
+		CCEA90FC77B21754F97294F5 /* Pods_YelpPlusAR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85EF25820BF51C1CF6F0DBB5 /* Pods_YelpPlusAR.framework */; };
 		D0272CBC216EE1530047FFE8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0272CBB216EE1530047FFE8 /* AppDelegate.swift */; };
 		D0272CBE216EE1530047FFE8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0272CBD216EE1530047FFE8 /* ViewController.swift */; };
 		D0272CC1216EE1530047FFE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0272CBF216EE1530047FFE8 /* Main.storyboard */; };
@@ -27,23 +15,13 @@
 		D0272CC6216EE1540047FFE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0272CC5216EE1540047FFE8 /* Assets.xcassets */; };
 		D0272CC9216EE1540047FFE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0272CC7216EE1540047FFE8 /* LaunchScreen.storyboard */; };
 		D0272CD1216FF8860047FFE8 /* YelpPlusARModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0272CD0216FF8860047FFE8 /* YelpPlusARModel.swift */; };
-		D066836021715BCE003A0FD6 /* MainARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D066835F21715BCE003A0FD6 /* MainARViewController.swift */; };
+		D0BDF5812176B82400CF7700 /* MainARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BDF5802176B82400CF7700 /* MainARViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D00151FF2171866F0054963D /* ARAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotation.swift; sourceTree = "<group>"; };
-		D00152002171866F0054963D /* ARTrackingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARTrackingManager.swift; sourceTree = "<group>"; };
-		D00152012171866F0054963D /* ARPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARPresenter.swift; sourceTree = "<group>"; };
-		D00152022171866F0054963D /* ARAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotationView.swift; sourceTree = "<group>"; };
-		D00152032171866F0054963D /* ARPresenterTransform.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARPresenterTransform.swift; sourceTree = "<group>"; };
-		D00152042171866F0054963D /* ARConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARConfiguration.swift; sourceTree = "<group>"; };
-		D00152062171866F0054963D /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
-		D00152072171866F0054963D /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
-		D00152092171866F0054963D /* DebugMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugMapViewController.swift; sourceTree = "<group>"; };
-		D001520B2171866F0054963D /* hdar_close@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@3x.png"; sourceTree = "<group>"; };
-		D001520C2171866F0054963D /* hdar_close@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "hdar_close@2x.png"; sourceTree = "<group>"; };
-		D001520D2171866F0054963D /* DebugMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DebugMapViewController.xib; sourceTree = "<group>"; };
-		D001520E2171866F0054963D /* hdar_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hdar_close.png; sourceTree = "<group>"; };
+		419AD71F5C8C2AB4F0DEA9C2 /* Pods-YelpPlusAR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YelpPlusAR.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YelpPlusAR/Pods-YelpPlusAR.debug.xcconfig"; sourceTree = "<group>"; };
+		85EF25820BF51C1CF6F0DBB5 /* Pods_YelpPlusAR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YelpPlusAR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EB8B4C79557DC1BF75B0430 /* Pods-YelpPlusAR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YelpPlusAR.release.xcconfig"; path = "Pods/Target Support Files/Pods-YelpPlusAR/Pods-YelpPlusAR.release.xcconfig"; sourceTree = "<group>"; };
 		D0272CB8216EE1530047FFE8 /* YelpPlusAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YelpPlusAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0272CBB216EE1530047FFE8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0272CBD216EE1530047FFE8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,7 +31,7 @@
 		D0272CC8216EE1540047FFE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0272CCA216EE1540047FFE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0272CD0216FF8860047FFE8 /* YelpPlusARModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpPlusARModel.swift; sourceTree = "<group>"; };
-		D066835F21715BCE003A0FD6 /* MainARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainARViewController.swift; sourceTree = "<group>"; };
+		D0BDF5802176B82400CF7700 /* MainARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainARViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,62 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCEA90FC77B21754F97294F5 /* Pods_YelpPlusAR.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D00151FD2171866F0054963D /* HDAugmentedReality */ = {
+		3476981EB73C0090BE87CAAC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D00151FE2171866F0054963D /* Classes */,
-				D001520A2171866F0054963D /* Resources */,
+				85EF25820BF51C1CF6F0DBB5 /* Pods_YelpPlusAR.framework */,
 			);
-			path = HDAugmentedReality;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D00151FE2171866F0054963D /* Classes */ = {
+		353024E8AEC1FDE0E1C16996 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D00151FF2171866F0054963D /* ARAnnotation.swift */,
-				D00152002171866F0054963D /* ARTrackingManager.swift */,
-				D00152012171866F0054963D /* ARPresenter.swift */,
-				D00152022171866F0054963D /* ARAnnotationView.swift */,
-				D00152032171866F0054963D /* ARPresenterTransform.swift */,
-				D00152042171866F0054963D /* ARConfiguration.swift */,
-				D00152052171866F0054963D /* External */,
-				D00152072171866F0054963D /* ARViewController.swift */,
-				D00152082171866F0054963D /* Debug */,
+				419AD71F5C8C2AB4F0DEA9C2 /* Pods-YelpPlusAR.debug.xcconfig */,
+				8EB8B4C79557DC1BF75B0430 /* Pods-YelpPlusAR.release.xcconfig */,
 			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		D00152052171866F0054963D /* External */ = {
-			isa = PBXGroup;
-			children = (
-				D00152062171866F0054963D /* CameraView.swift */,
-			);
-			path = External;
-			sourceTree = "<group>";
-		};
-		D00152082171866F0054963D /* Debug */ = {
-			isa = PBXGroup;
-			children = (
-				D00152092171866F0054963D /* DebugMapViewController.swift */,
-			);
-			path = Debug;
-			sourceTree = "<group>";
-		};
-		D001520A2171866F0054963D /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				D001520B2171866F0054963D /* hdar_close@3x.png */,
-				D001520C2171866F0054963D /* hdar_close@2x.png */,
-				D001520D2171866F0054963D /* DebugMapViewController.xib */,
-				D001520E2171866F0054963D /* hdar_close.png */,
-			);
-			path = Resources;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		D0272CAF216EE1520047FFE8 = {
@@ -124,6 +68,8 @@
 			children = (
 				D0272CBA216EE1530047FFE8 /* YelpPlusAR */,
 				D0272CB9216EE1530047FFE8 /* Products */,
+				353024E8AEC1FDE0E1C16996 /* Pods */,
+				3476981EB73C0090BE87CAAC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -138,12 +84,11 @@
 		D0272CBA216EE1530047FFE8 /* YelpPlusAR */ = {
 			isa = PBXGroup;
 			children = (
-				D00151FD2171866F0054963D /* HDAugmentedReality */,
-				D0272CBB216EE1530047FFE8 /* AppDelegate.swift */,
-				D0272CBD216EE1530047FFE8 /* ViewController.swift */,
-				D066835F21715BCE003A0FD6 /* MainARViewController.swift */,
-				D0272CD0216FF8860047FFE8 /* YelpPlusARModel.swift */,
 				D0272CBF216EE1530047FFE8 /* Main.storyboard */,
+				D0272CBD216EE1530047FFE8 /* ViewController.swift */,
+				D0BDF5802176B82400CF7700 /* MainARViewController.swift */,
+				D0272CBB216EE1530047FFE8 /* AppDelegate.swift */,
+				D0272CD0216FF8860047FFE8 /* YelpPlusARModel.swift */,
 				D0272CC5216EE1540047FFE8 /* Assets.xcassets */,
 				D0272CC7216EE1540047FFE8 /* LaunchScreen.storyboard */,
 				D0272CCA216EE1540047FFE8 /* Info.plist */,
@@ -159,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0272CCD216EE1540047FFE8 /* Build configuration list for PBXNativeTarget "YelpPlusAR" */;
 			buildPhases = (
+				0C35B34180A15821D3202A6E /* [CP] Check Pods Manifest.lock */,
 				D0272CB4216EE1520047FFE8 /* Sources */,
 				D0272CB5216EE1520047FFE8 /* Frameworks */,
 				D0272CB6216EE1520047FFE8 /* Resources */,
+				0897FFBC17C51B1E8DA49639 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -213,14 +160,57 @@
 				D0272CC9216EE1540047FFE8 /* LaunchScreen.storyboard in Resources */,
 				D0272CC6216EE1540047FFE8 /* Assets.xcassets in Resources */,
 				D0272CC1216EE1530047FFE8 /* Main.storyboard in Resources */,
-				D00152182171866F0054963D /* hdar_close@3x.png in Resources */,
-				D00152192171866F0054963D /* hdar_close@2x.png in Resources */,
-				D001521B2171866F0054963D /* hdar_close.png in Resources */,
-				D001521A2171866F0054963D /* DebugMapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0897FFBC17C51B1E8DA49639 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-YelpPlusAR/Pods-YelpPlusAR-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ARCL/ARCL.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ARCL.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YelpPlusAR/Pods-YelpPlusAR-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0C35B34180A15821D3202A6E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YelpPlusAR-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D0272CB4216EE1520047FFE8 /* Sources */ = {
@@ -228,19 +218,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0272CBE216EE1530047FFE8 /* ViewController.swift in Sources */,
-				D00152172171866F0054963D /* DebugMapViewController.swift in Sources */,
-				D00152122171866F0054963D /* ARAnnotationView.swift in Sources */,
-				D001520F2171866F0054963D /* ARAnnotation.swift in Sources */,
-				D00152152171866F0054963D /* CameraView.swift in Sources */,
+				D0BDF5812176B82400CF7700 /* MainARViewController.swift in Sources */,
 				D0272CBC216EE1530047FFE8 /* AppDelegate.swift in Sources */,
 				D0272CD1216FF8860047FFE8 /* YelpPlusARModel.swift in Sources */,
-				D00152102171866F0054963D /* ARTrackingManager.swift in Sources */,
-				D00152132171866F0054963D /* ARPresenterTransform.swift in Sources */,
-				D00152142171866F0054963D /* ARConfiguration.swift in Sources */,
-				D00152162171866F0054963D /* ARViewController.swift in Sources */,
 				D0272CC4216EE1530047FFE8 /* YelpPlusAR.xcdatamodeld in Sources */,
-				D066836021715BCE003A0FD6 /* MainARViewController.swift in Sources */,
-				D00152112171866F0054963D /* ARPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +365,7 @@
 		};
 		D0272CCE216EE1540047FFE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 419AD71F5C8C2AB4F0DEA9C2 /* Pods-YelpPlusAR.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -402,6 +384,7 @@
 		};
 		D0272CCF216EE1540047FFE8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EB8B4C79557DC1BF75B0430 /* Pods-YelpPlusAR.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

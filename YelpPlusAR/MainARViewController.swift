@@ -11,17 +11,15 @@ import ARKit
 import SceneKit
 import CoreLocation
 import MapKit
+import ARCL
 
-class MainARViewController: UIViewController {
+class MainARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDelegate {
     
-    //this will be loaded with the current restaurant list
-    var listOfRestaurants: NSArray = []
-    var ARlocationManager: CLLocationManager = CLLocationManager()
-    var restNodes: [MKMapPoint] = []
-    
-    @IBOutlet weak var sceneView: ARSCNView!
-    
+    //this will be loaded with the current places list
+    var listOfPlaces: NSArray = []
     @IBOutlet weak var mapSwitch: UISwitch!
+    
+    var sceneLocationView = SceneLocationView()
     
     @IBAction func mapSwitchPressed(_ sender: UISwitch) {
         dismiss(animated: true, completion: nil)
@@ -29,42 +27,70 @@ class MainARViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ARlocationManager.delegate = self
         mapSwitch.isOn = true
+        sceneLocationView.run()
+        view.addSubview(sceneLocationView)
         
-        //setting up sceneView
-        sceneView.delegate = self
-        sceneView.showsStatistics = true
-        sceneView.scene = SCNScene()
+        for place in self.listOfPlaces {
+            let placeDict = place as! NSDictionary
+            let placeCoord = placeDict["coordinates"] as! NSDictionary
+            let lat = placeCoord["latitude"]! as! Double
+            let long = placeCoord["longitude"]! as! Double
+            let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: long)
+            print(coordinate)
+            let location = CLLocation(coordinate: coordinate, altitude: 0)
+            let image = UIImage(named: "cosmopolitan")
+            
+            let annotationNode = LocationAnnotationNode(location: location, image: image!)
+            
+            let placeName = placeDict["name"] as! String
+            let textGeometry = SCNText()
+            textGeometry.string = placeName
+            textGeometry.font = UIFont(name: "Arial", size: 3)
+            textGeometry.firstMaterial?.diffuse.contents = UIColor.black
+            
+            let textNode = SCNNode(geometry: textGeometry)
+            textNode.position = SCNVector3(-15.0, -15.5, 2.0)
+            
+            annotationNode.addChildNode(textNode)
+            sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
+        }
         
-        //setting up node
-        let circleNode = createSphereNode(with: 0.2, color: .blue)
-        circleNode.position = SCNVector3(0, 0, -1) // 1 meter in front
-        sceneView.scene.rootNode.addChildNode(circleNode)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        sceneLocationView.frame = view.bounds
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let config = ARWorldTrackingConfiguration()
-        config.worldAlignment = .gravityAndHeading
-        sceneView.session.run(config)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        sceneView.session.pause()
-    }
-    
-    func createSphereNode(with radius: CGFloat, color: UIColor) -> SCNNode {
-        let geometry = SCNSphere(radius: radius)
-        geometry.firstMaterial?.diffuse.contents = color
-        let sphereNode = SCNNode(geometry: geometry)
-        return sphereNode
+        sceneLocationView.pause()
     }
 }
 
-extension MainARViewController: ARSCNViewDelegate {
-    
-}
-
-extension MainARViewController: CLLocationManagerDelegate {
-    
-}
+//open class LocationTextNode: LocationNode {
+//    public let label: UILabel
+//    public let textNode: SCNNode
+//    public var scaleRelativeToDistance = false
+//
+//    public init(location: CLLocation?, label: UILabel) {
+//        self.label = label
+//        let plane = SCNPlane(width: label.size.width / 100, height: label.size.height / 100)
+//        plane.firstMaterial!.diffuse.contents = label
+//        plane.firstMaterial!.lightingModel = .constant
+//
+//        textNode = SCNNode()
+//        textNode.geometry = plane
+//
+//        super.init(location: location)
+//
+//        let billboardConstraint = SCNBillboardConstraint()
+//        billboardConstraint.freeAxes = SCNBillboardAxis.Y
+//        constraints = [billboardConstraint]
+//
+//        addChildNode(textNode)
+//   }
+//}
