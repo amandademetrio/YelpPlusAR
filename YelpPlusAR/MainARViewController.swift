@@ -12,22 +12,17 @@ import SceneKit
 import CoreLocation
 import MapKit
 import ARCL
+import CoreData
 
 class MainARViewController: UIViewController, ARSCNViewDelegate, CLLocationManagerDelegate {
     
     //this will be loaded with the current places list
     var listOfPlaces: NSArray = []
-    @IBOutlet weak var mapSwitch: UISwitch!
-    
+    var arLocationManager: CLLocationManager = CLLocationManager()
     var sceneLocationView = SceneLocationView()
-    
-    @IBAction func mapSwitchPressed(_ sender: UISwitch) {
-        dismiss(animated: true, completion: nil)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mapSwitch.isOn = true
         sceneLocationView.run()
         view.addSubview(sceneLocationView)
         
@@ -39,7 +34,7 @@ class MainARViewController: UIViewController, ARSCNViewDelegate, CLLocationManag
             let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: long)
             print(coordinate)
             let location = CLLocation(coordinate: coordinate, altitude: 0)
-            let image = UIImage(named: "cosmopolitan")
+            let image = UIImage(named: "location")
             
             let annotationNode = LocationAnnotationNode(location: location, image: image!)
             
@@ -68,29 +63,11 @@ class MainARViewController: UIViewController, ARSCNViewDelegate, CLLocationManag
     
     override func viewWillDisappear(_ animated: Bool) {
         sceneLocationView.pause()
+        //removing all nodes when scene disapeers, check if this works
+        sceneLocationView.scene.rootNode.enumerateChildNodes { (node, stop) in
+            node.removeFromParentNode()
+            print("removed child nodes")
+        }
+        //store users last known location
     }
 }
-
-//open class LocationTextNode: LocationNode {
-//    public let label: UILabel
-//    public let textNode: SCNNode
-//    public var scaleRelativeToDistance = false
-//
-//    public init(location: CLLocation?, label: UILabel) {
-//        self.label = label
-//        let plane = SCNPlane(width: label.size.width / 100, height: label.size.height / 100)
-//        plane.firstMaterial!.diffuse.contents = label
-//        plane.firstMaterial!.lightingModel = .constant
-//
-//        textNode = SCNNode()
-//        textNode.geometry = plane
-//
-//        super.init(location: location)
-//
-//        let billboardConstraint = SCNBillboardConstraint()
-//        billboardConstraint.freeAxes = SCNBillboardAxis.Y
-//        constraints = [billboardConstraint]
-//
-//        addChildNode(textNode)
-//   }
-//}

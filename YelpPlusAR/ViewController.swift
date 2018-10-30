@@ -26,16 +26,44 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Setting Map
-        mainMap.userTrackingMode = .follow
-        //Setting up location manager
-        
         //First check if there already location is authorized
+        
         if CLLocationManager.locationServicesEnabled() {
-            locationManager.requestWhenInUseAuthorization()
-            locationManager.startUpdatingLocation()
+            switch CLLocationManager.authorizationStatus() {
+            case .notDetermined, .restricted, .denied:
+                locationManager.requestWhenInUseAuthorization()
+                locationManager.startUpdatingLocation()
+                mainMap.userTrackingMode = .follow
+                self.getMapContents()
+            case .authorizedAlways, .authorizedWhenInUse:
+                mainMap.userTrackingMode = .follow
+                self.getMapContents()
+            }
+        } else {
+            print("Location services are not enabled")
         }
-
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.arSwitch.isOn = false
+        self.getMapContents()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! MainARViewController
+        destination.listOfPlaces = self.listOfPlaces
+        destination.arLocationManager = self.locationManager
+    }
+    
+    func createMapMark(_ latitude: Double, _ longitude: Double, _ restaurantName: String) {
+        let coordinates = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        let mapPoint = MKPointAnnotation()
+        mapPoint.coordinate = coordinates
+        mapPoint.title = restaurantName
+        self.mainMap.addAnnotation(mapPoint)
+    }
+    
+    func getMapContents() {
         let userLatitute = self.locationManager.location?.coordinate.latitude
         let userLongiture = self.locationManager.location?.coordinate.longitude
 
@@ -59,23 +87,6 @@ class ViewController: UIViewController {
                 print("something went wrong")
             }
         }, userLatitute!, userLongiture!)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        self.arSwitch.isOn = false
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination as! MainARViewController
-        destination.listOfPlaces = self.listOfPlaces
-    }
-    
-    func createMapMark(_ latitude: Double, _ longitude: Double, _ restaurantName: String) {
-        let coordinates = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-        let mapPoint = MKPointAnnotation()
-        mapPoint.coordinate = coordinates
-        mapPoint.title = restaurantName
-        self.mainMap.addAnnotation(mapPoint)
     }
 }
 

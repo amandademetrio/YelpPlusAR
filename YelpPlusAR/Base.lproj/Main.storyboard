@@ -55,28 +55,13 @@
                     <view key="view" contentMode="scaleToFill" id="gdn-UK-ZTO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qhQ-SN-UOm">
-                                <rect key="frame" x="306" y="40" width="51" height="31"/>
-                                <connections>
-                                    <action selector="mapSwitchPressed:" destination="OOP-pp-8N2" eventType="valueChanged" id="HpY-xw-tsZ"/>
-                                </connections>
-                            </switch>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="Kv8-aZ-JxF" firstAttribute="trailing" secondItem="qhQ-SN-UOm" secondAttribute="trailing" constant="20" id="FWC-5A-ZO7"/>
-                            <constraint firstItem="qhQ-SN-UOm" firstAttribute="top" secondItem="Kv8-aZ-JxF" secondAttribute="top" constant="20" id="fFi-vw-XWc"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Kv8-aZ-JxF"/>
                     </view>
-                    <connections>
-                        <outlet property="mapSwitch" destination="qhQ-SN-UOm" id="XAn-vt-zN9"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="adn-fS-Tu3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1372" y="277"/>
+            <point key="canvasLocation" x="1262" y="279"/>
         </scene>
     </scenes>
 </document>
